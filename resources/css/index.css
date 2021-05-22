@@ -2,6 +2,7 @@
 a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 ul {
     list-style: none;
@@ -10,6 +11,7 @@ ul {
     justify-content: center;
     padding: 10px;
     margin: 0px;
+    background-color: cadetblue;
 }
 li {
     margin-right:5px ;
@@ -17,6 +19,8 @@ li {
 }
 h1 {
     font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
 }
 nav{
     display: flex;
@@ -27,10 +31,51 @@ nav{
 section {
             text-align: center;
 }
+main {
+    padding: 40px;
+    justify-content: center;
+    text-align: center;
+}
+button {
+            background-color: gold;
+            border-color: deepskyblue;
+            font-weight: bold;
+}
+button:hover {
+                border-color: gold;
+                background-color: deepskyblue;
+                font-size: larger;
+}
+article {
+            box-shadow: 5px 5px 10px black;
+            padding: 20px;
+            margin-bottom: 20px;
+}
+
+/*BARRA*/
+li >a:hover {
+                font-size: larger;
+                font-weight: bolder;
+                color: chartreuse;
+}
 
 /*HEADER*/
 section >img {
                 width: 40%;
+                border-radius: 10px;
+                box-shadow: 5px 5px 10px black;
+                margin-bottom: 10px;
 }
 
-/*CLASES*/
+/*TARJETAS*/
+article > figure > img {
+                            border: 3px solid gold;
+                            padding: 10px;
+                            margin-bottom: 10px;
+                            
+}
+article > figure > figcaption {
+                                font-size: large;
+                                font-weight: bold;
+                                font-style: oblique;
+}

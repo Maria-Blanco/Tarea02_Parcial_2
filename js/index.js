@@ -7,7 +7,7 @@ $(document).ready(function () {
                            {'title':'Capuchino',
                            'srcInicio' : 'resources/images/capuchino.png' ,
                            'srcFin': 'resources/images/capuchino_mini.png'}, 
-                           {'ttitleit': 'Café Mocca',
+                           {'title': 'Café Mocca',
                            'srcInicio' : 'resources/images/cafe_mocca.jpg',
                            'srcFin': 'resources/images/mocca_mini.png' }, 
                            {'title': 'Bebida',
@@ -21,7 +21,7 @@ $(document).ready(function () {
 
         let imagenInicio = listadoTarjetas[i].srcInicio;
         let titleArticle = listadoTarjetas[i].title;        
-        let listaMinis = listadoTarjetas[i].srcFin
+        let listaMinis = listadoTarjetas[i].srcFin;
 
         let textoHtml = '<article class=\"miTarjeta\">' +
                             '<figure> ' +
@@ -37,7 +37,7 @@ $(document).ready(function () {
     // Funcionalida de cuando la pantalla cambia de tamaño - Ancho
     $(window).resize(function (){
         let anchoPantalla = window.innerWidth;
-
+        
         if (anchoPantalla < 920) {
             $('#listaTarjetas article p').hide(); 
             $('#listaTarjetas article figure img').attr("src", listaMinis); 
@@ -45,6 +45,7 @@ $(document).ready(function () {
             $('ul').css("display", "block");
             $('section img').hide();
             $('section').css("background-color", "green");
+            $('section').css("color", "gold");
         } else {
             $('#listaTarjetas article p').show();
             $('#listaTarjetas article figure img').attr("src", imagenInicio); 
@@ -52,6 +53,7 @@ $(document).ready(function () {
             $('ul').css("display", "inline-flex");
             $('section img').show();
             $('section').css("background-color", "white");
+            $('section').css("color", "black");
         }
         
             
@@ -59,6 +61,7 @@ $(document).ready(function () {
 
     
 };
+
 
     $("button").click(function(){
         $("ul").toggle();
