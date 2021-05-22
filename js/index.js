@@ -21,7 +21,6 @@ $(document).ready(function () {
 
         let imagenInicio = listadoTarjetas[i].srcInicio;
         let titleArticle = listadoTarjetas[i].title;        
-        let listaMinis = listadoTarjetas[i].srcFin;
 
         let textoHtml = '<article class=\"miTarjeta\">' +
                             '<figure> ' +
@@ -40,7 +39,13 @@ $(document).ready(function () {
         
         if (anchoPantalla < 920) {
             $('#listaTarjetas article p').hide(); 
-            $('#listaTarjetas article figure img').attr("src", listaMinis); 
+            for (let i=0; i< listadoTarjetas.length; i++){
+
+                let listaMinis = listadoTarjetas[i].srcFin;
+                console.log  (listaMinis);
+                var indexCss = i+1;
+                $('.miTarjeta:nth-child(' + indexCss + ') img').attr('src', listaMinis);
+                }
             $('button').hide();
             $('ul').css("display", "block");
             $('section img').hide();
@@ -48,7 +53,13 @@ $(document).ready(function () {
             $('section').css("color", "gold");
         } else {
             $('#listaTarjetas article p').show();
-            $('#listaTarjetas article figure img').attr("src", imagenInicio); 
+            for (let i=0; i< listadoTarjetas.length; i++){
+
+                let imagenInicio = listadoTarjetas[i].srcInicio;
+                console.log  (imagenInicio);
+                var indexCss = i+1;
+                $('.miTarjeta:nth-child(' + indexCss + ') img').attr('src', imagenInicio);
+                }
             $('button').show();
             $('ul').css("display", "inline-flex");
             $('section img').show();
